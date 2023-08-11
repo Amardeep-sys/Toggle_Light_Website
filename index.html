@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>VueLamp</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+<style>
+   .on{
+   margin-left: 39px;
+   background: rgb(255, 32, 251);
+}
+.fun{
+   opacity: 1;
+}
+</style>
+</head>
+<body>
+   <section class="main">
+      <nav>
+         <div class="logo-cont">
+      <img src="./vueLamp_img/menu.png" alt=""><img src="./VueLamp_img/logo.png" alt="">
+      </div>
+      <ul class="nav-bar">
+         <li><a href="">Latest</a></li>
+         <li><a href="">Modern</a></li>
+         <li><a href="">Contemporary</a></li>
+         <li><a href="">Affordable</a></li>
+         <li><button onclick="run()"><span  class="toggle"></span></button></li>
+      </ul>
+   </nav>
+   <div class="lamp-cont">
+      <img src="./VueLamp_img/lamp.png" alt="">
+      <img src="./VueLamp_img/light.png" alt="" class="lamp">
+   </div>
+   <div class="text">
+      <h1>Latest<br> in Lightning</h1>
+      <p>This is the first lamp from our company. We're making the huge collection of modern Lamps is all categories from home use to office use.</p>
+      <a href="">Check All Collections</a>
+      <div class="control">
+         <p>04</p>
+         <div class="span"><span class="percent"></span>
+         </div>
+         <p>05</p>
+      </div>
+   </div>
+   </section>
+
+   <script>
+       let a = document.querySelector('.toggle');
+       let b = document.getElementsByClassName('lamp')[0];
+    function run(){
+    
+     a.classList.toggle('on');
+
+    
+       compt = window.getComputedStyle(b);
+       console.log(compt)
+       if(compt.opacity == '0'){
+        b.style.opacity = '1';
+       }else{
+         b.style.opacity = '0';
+       }
+    }
+   </script>
+</body>
+</html>
